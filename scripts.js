@@ -119,7 +119,8 @@ function addLayers() {
                 12, '#a50f15', 13, '#a50f15', 14, '#a50f15',
                 15, '#a50f15', 16, '#a50f15', '#ffffff'
             ],
-            'fill-opacity': 1
+            'fill-opacity': 1,
+            'fill-outline-color': '#000000'
         }
     });
 
@@ -140,8 +141,7 @@ function addCongressionalLayers() {
         'type': 'fill',
         'source': 'nyCongress',
         'paint': {
-            'fill-color': 'transparent',
-            'fill-outline-color': '#000000'
+            'fill-color': 'transparent'
         }
     });
 }
@@ -158,8 +158,7 @@ function addHouseLayers() {
         'type': 'fill',
         'source': 'nyHouse',
         'paint': {
-            'fill-color': 'transparent',
-            'fill-outline-color': '#000000'
+            'fill-color': 'transparent'
         }
     });
 }
@@ -176,8 +175,7 @@ function addSenateLayers() {
         'type': 'fill',
         'source': 'nySenate',
         'paint': {
-            'fill-color': 'transparent',
-            'fill-outline-color': '#000000'
+            'fill-color': 'transparent'
         }
     });
 }

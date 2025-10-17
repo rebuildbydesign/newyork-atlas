@@ -11,7 +11,7 @@ var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/light-v11',
     center: [-75.70039, 42.98969], // CENTERED ON NEW YORK CITY
-    zoom: 6.5,
+    zoom: 6.15,
     minZoom: 6
 });
 

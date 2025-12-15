@@ -51,8 +51,9 @@
     <!-- MAPBOX GEOCODER SEARCH INPUT -->
     <div id="geocoder" style="position:absolute;top:90px;left:19px;z-index:9999;width:340px;"></div>
 
-    <!-- HIGH LEVEL SUMMARY FINDINGS (STATIC PANEL) -->
-    <div id="highlevel-findings">
+   <!-- HIGH LEVEL SUMMARY FINDINGS (STATIC PANEL) -->
+<div id="highlevel-findings">
+    <button id="close-findings" aria-label="Close">&times;</button>
         <p>
             <strong>Since 2011, New York has received over <span class="highlight-red">$27.8 billion</span> in federal
                 disaster assistance through <span class="highlight-red">23 major disaster declarations</span> related to
@@ -63,6 +64,9 @@
             your elected representatives to advocate for local investments in safer infrastructure.
         </p>
     </div>
+
+    <!-- INFO BUTTON (HIDDEN BY DEFAULT) -->
+<button id="open-findings" aria-label="Information">i</button>
 
     <!-- MAIN MAP CONTAINER -->
     <div id="map"></div>

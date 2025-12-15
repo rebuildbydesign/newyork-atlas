@@ -28,6 +28,21 @@ var geocoder = new MapboxGeocoder({
 });
 document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
 
+// NUDGE GEOCODER ON LOAD
+setTimeout(() => {
+  const geocoderEl = document.querySelector('.mapboxgl-ctrl-geocoder');
+  if (geocoderEl) {
+    geocoderEl.classList.add('nudge');
+
+    // Optional: stop nudging after a few seconds
+    setTimeout(() => {
+      geocoderEl.classList.remove('nudge');
+    }, 3000);
+  }
+}, 300);
+
+
+
 // When user searches, build popup from county + districts (regardless of visibility)
 geocoder.on('result', function (e) {
   const lngLat = e.result.center;
@@ -500,3 +515,17 @@ function getDistrictFeaturesFromMemory(lngLat) {
 
   return hits;
 }
+// -------------------- HIGH-LEVEL FINDINGS TOGGLE --------------------
+const findingsPanel = document.getElementById('highlevel-findings');
+const closeFindingsBtn = document.getElementById('close-findings');
+const openFindingsBtn = document.getElementById('open-findings');
+
+closeFindingsBtn.addEventListener('click', () => {
+    findingsPanel.style.display = 'none';
+    openFindingsBtn.style.display = 'block';
+});
+
+openFindingsBtn.addEventListener('click', () => {
+    findingsPanel.style.display = 'block';
+    openFindingsBtn.style.display = 'none';
+});
